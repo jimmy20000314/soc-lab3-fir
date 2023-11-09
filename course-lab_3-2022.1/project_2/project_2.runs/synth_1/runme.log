@@ -1,0 +1,543 @@
+
+*** Running vivado
+    with args -log fir.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir.tcl
+
+
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source fir.tcl -notrace
+Command: synth_design -top fir -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 53832
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1223.109 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fir' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:1]
+Found Register slices driven by multiple sources
+Found Register slices driven by multiple sources
+Found Register slices driven by multiple sources
+Found Register slices driven by multiple sources
+Found Register slices driven by multiple sources
+Found Register slices driven by multiple sources
+Found Register slices driven by multiple sources
+Found Register slices driven by multiple sources
+Found Register slices driven by multiple sources
+Found Register slices driven by multiple sources
+INFO: [Synth 8-6155] done synthesizing module 'fir' (1#1) [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1223.109 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1223.109 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1223.109 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1223.109 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/SOC/course-lab_3-2022.1/fir/constrc_1.xdc]
+WARNING: [Vivado 12-663] port, pin or net 'get_ports' not found. [D:/SOC/course-lab_3-2022.1/fir/constrc_1.xdc:1]
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'axis_clk' matched to 'port' objects. [D:/SOC/course-lab_3-2022.1/fir/constrc_1.xdc:1]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+Finished Parsing XDC File [D:/SOC/course-lab_3-2022.1/fir/constrc_1.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1295.738 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1295.738 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1295.738 ; gain = 72.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1295.738 ; gain = 72.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1295.738 ; gain = 72.629
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'tap_address_reg' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:400]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1295.738 ; gain = 72.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	  11 Input   32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 12    
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	              32x32  Multipliers := 10    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 1     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP result_adder10, operation Mode is: A2*B.
+DSP Report: register result_adder10 is absorbed into DSP result_adder10.
+DSP Report: operator result_adder10 is absorbed into DSP result_adder10.
+DSP Report: operator result_adder10 is absorbed into DSP result_adder10.
+DSP Report: Generating DSP result_adder10, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder10 is absorbed into DSP result_adder10.
+DSP Report: operator result_adder10 is absorbed into DSP result_adder10.
+DSP Report: Generating DSP result_adder10, operation Mode is: A*B2.
+DSP Report: register result_adder10 is absorbed into DSP result_adder10.
+DSP Report: operator result_adder10 is absorbed into DSP result_adder10.
+DSP Report: operator result_adder10 is absorbed into DSP result_adder10.
+DSP Report: Generating DSP result_adder10, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder10 is absorbed into DSP result_adder10.
+DSP Report: operator result_adder10 is absorbed into DSP result_adder10.
+DSP Report: Generating DSP result_adder9, operation Mode is: A2*B.
+DSP Report: register result_adder9 is absorbed into DSP result_adder9.
+DSP Report: operator result_adder9 is absorbed into DSP result_adder9.
+DSP Report: operator result_adder9 is absorbed into DSP result_adder9.
+DSP Report: Generating DSP result_adder9, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder9 is absorbed into DSP result_adder9.
+DSP Report: operator result_adder9 is absorbed into DSP result_adder9.
+DSP Report: Generating DSP result_adder9, operation Mode is: A*B2.
+DSP Report: register result_adder9 is absorbed into DSP result_adder9.
+DSP Report: operator result_adder9 is absorbed into DSP result_adder9.
+DSP Report: operator result_adder9 is absorbed into DSP result_adder9.
+DSP Report: Generating DSP result_adder9, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder9 is absorbed into DSP result_adder9.
+DSP Report: operator result_adder9 is absorbed into DSP result_adder9.
+DSP Report: Generating DSP result_adder8, operation Mode is: A2*B.
+DSP Report: register result_adder8 is absorbed into DSP result_adder8.
+DSP Report: operator result_adder8 is absorbed into DSP result_adder8.
+DSP Report: operator result_adder8 is absorbed into DSP result_adder8.
+DSP Report: Generating DSP result_adder8, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder8 is absorbed into DSP result_adder8.
+DSP Report: operator result_adder8 is absorbed into DSP result_adder8.
+DSP Report: Generating DSP result_adder8, operation Mode is: A*B2.
+DSP Report: register result_adder8 is absorbed into DSP result_adder8.
+DSP Report: operator result_adder8 is absorbed into DSP result_adder8.
+DSP Report: operator result_adder8 is absorbed into DSP result_adder8.
+DSP Report: Generating DSP result_adder8, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder8 is absorbed into DSP result_adder8.
+DSP Report: operator result_adder8 is absorbed into DSP result_adder8.
+DSP Report: Generating DSP result_adder7, operation Mode is: A2*B.
+DSP Report: register result_adder7 is absorbed into DSP result_adder7.
+DSP Report: operator result_adder7 is absorbed into DSP result_adder7.
+DSP Report: operator result_adder7 is absorbed into DSP result_adder7.
+DSP Report: Generating DSP result_adder7, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder7 is absorbed into DSP result_adder7.
+DSP Report: operator result_adder7 is absorbed into DSP result_adder7.
+DSP Report: Generating DSP result_adder7, operation Mode is: A*B2.
+DSP Report: register result_adder7 is absorbed into DSP result_adder7.
+DSP Report: operator result_adder7 is absorbed into DSP result_adder7.
+DSP Report: operator result_adder7 is absorbed into DSP result_adder7.
+DSP Report: Generating DSP result_adder7, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder7 is absorbed into DSP result_adder7.
+DSP Report: operator result_adder7 is absorbed into DSP result_adder7.
+DSP Report: Generating DSP result_adder6, operation Mode is: A2*B.
+DSP Report: register result_adder6 is absorbed into DSP result_adder6.
+DSP Report: operator result_adder6 is absorbed into DSP result_adder6.
+DSP Report: operator result_adder6 is absorbed into DSP result_adder6.
+DSP Report: Generating DSP result_adder6, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder6 is absorbed into DSP result_adder6.
+DSP Report: operator result_adder6 is absorbed into DSP result_adder6.
+DSP Report: Generating DSP result_adder6, operation Mode is: A*B2.
+DSP Report: register result_adder6 is absorbed into DSP result_adder6.
+DSP Report: operator result_adder6 is absorbed into DSP result_adder6.
+DSP Report: operator result_adder6 is absorbed into DSP result_adder6.
+DSP Report: Generating DSP result_adder6, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder6 is absorbed into DSP result_adder6.
+DSP Report: operator result_adder6 is absorbed into DSP result_adder6.
+DSP Report: Generating DSP result_adder5, operation Mode is: A2*B.
+DSP Report: register result_adder5 is absorbed into DSP result_adder5.
+DSP Report: operator result_adder5 is absorbed into DSP result_adder5.
+DSP Report: operator result_adder5 is absorbed into DSP result_adder5.
+DSP Report: Generating DSP result_adder5, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder5 is absorbed into DSP result_adder5.
+DSP Report: operator result_adder5 is absorbed into DSP result_adder5.
+DSP Report: Generating DSP result_adder5, operation Mode is: A*B2.
+DSP Report: register result_adder5 is absorbed into DSP result_adder5.
+DSP Report: operator result_adder5 is absorbed into DSP result_adder5.
+DSP Report: operator result_adder5 is absorbed into DSP result_adder5.
+DSP Report: Generating DSP result_adder5, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder5 is absorbed into DSP result_adder5.
+DSP Report: operator result_adder5 is absorbed into DSP result_adder5.
+DSP Report: Generating DSP result_adder4, operation Mode is: A2*B.
+DSP Report: register result_adder4 is absorbed into DSP result_adder4.
+DSP Report: operator result_adder4 is absorbed into DSP result_adder4.
+DSP Report: operator result_adder4 is absorbed into DSP result_adder4.
+DSP Report: Generating DSP result_adder4, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder4 is absorbed into DSP result_adder4.
+DSP Report: operator result_adder4 is absorbed into DSP result_adder4.
+DSP Report: Generating DSP result_adder4, operation Mode is: A*B2.
+DSP Report: register result_adder4 is absorbed into DSP result_adder4.
+DSP Report: operator result_adder4 is absorbed into DSP result_adder4.
+DSP Report: operator result_adder4 is absorbed into DSP result_adder4.
+DSP Report: Generating DSP result_adder4, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder4 is absorbed into DSP result_adder4.
+DSP Report: operator result_adder4 is absorbed into DSP result_adder4.
+DSP Report: Generating DSP result_adder3, operation Mode is: A2*B.
+DSP Report: register result_adder3 is absorbed into DSP result_adder3.
+DSP Report: operator result_adder3 is absorbed into DSP result_adder3.
+DSP Report: operator result_adder3 is absorbed into DSP result_adder3.
+DSP Report: Generating DSP result_adder3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder3 is absorbed into DSP result_adder3.
+DSP Report: operator result_adder3 is absorbed into DSP result_adder3.
+DSP Report: Generating DSP result_adder3, operation Mode is: A*B2.
+DSP Report: register result_adder3 is absorbed into DSP result_adder3.
+DSP Report: operator result_adder3 is absorbed into DSP result_adder3.
+DSP Report: operator result_adder3 is absorbed into DSP result_adder3.
+DSP Report: Generating DSP result_adder3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder3 is absorbed into DSP result_adder3.
+DSP Report: operator result_adder3 is absorbed into DSP result_adder3.
+DSP Report: Generating DSP result_adder2, operation Mode is: A2*B.
+DSP Report: register result_adder2 is absorbed into DSP result_adder2.
+DSP Report: operator result_adder2 is absorbed into DSP result_adder2.
+DSP Report: operator result_adder2 is absorbed into DSP result_adder2.
+DSP Report: Generating DSP result_adder2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder2 is absorbed into DSP result_adder2.
+DSP Report: operator result_adder2 is absorbed into DSP result_adder2.
+DSP Report: Generating DSP result_adder2, operation Mode is: A*B2.
+DSP Report: register result_adder2 is absorbed into DSP result_adder2.
+DSP Report: operator result_adder2 is absorbed into DSP result_adder2.
+DSP Report: operator result_adder2 is absorbed into DSP result_adder2.
+DSP Report: Generating DSP result_adder2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder2 is absorbed into DSP result_adder2.
+DSP Report: operator result_adder2 is absorbed into DSP result_adder2.
+DSP Report: Generating DSP result_adder1, operation Mode is: A2*B.
+DSP Report: register result_adder1 is absorbed into DSP result_adder1.
+DSP Report: operator result_adder1 is absorbed into DSP result_adder1.
+DSP Report: operator result_adder1 is absorbed into DSP result_adder1.
+DSP Report: Generating DSP result_adder1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder1 is absorbed into DSP result_adder1.
+DSP Report: operator result_adder1 is absorbed into DSP result_adder1.
+DSP Report: Generating DSP result_adder1, operation Mode is: A*B2.
+DSP Report: register result_adder1 is absorbed into DSP result_adder1.
+DSP Report: operator result_adder1 is absorbed into DSP result_adder1.
+DSP Report: operator result_adder1 is absorbed into DSP result_adder1.
+DSP Report: Generating DSP result_adder1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator result_adder1 is absorbed into DSP result_adder1.
+DSP Report: operator result_adder1 is absorbed into DSP result_adder1.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[31]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[30]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[29]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[28]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[27]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[26]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[25]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[24]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[23]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[22]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[21]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[20]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[19]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[18]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[17]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[16]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[15]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[14]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[13]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[12]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[11]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[10]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[9]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[8]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[7]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[6]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[5]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[4]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[3]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[2]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[1]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'result_adder_reg[0]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:279]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'rstate_reg[0]__0/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:118]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:118]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:118]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1295.738 ; gain = 72.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir         | A2*B           | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A*B2           | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A2*B           | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A*B2           | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A2*B           | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A*B2           | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A2*B           | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A*B2           | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A2*B           | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A*B2           | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A2*B           | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A*B2           | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A2*B           | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A*B2           | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A2*B           | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A*B2           | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A2*B           | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A*B2           | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A2*B           | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fir         | A*B2           | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|fir         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1295.738 ; gain = 72.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1295.738 ; gain = 72.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1295.738 ; gain = 72.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1295.738 ; gain = 72.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1295.738 ; gain = 72.629
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin test_wstate_OBUF[1] with 1st driver pin 'wstate_reg[1]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:133]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin test_wstate_OBUF[1] with 2nd driver pin 'wstate_reg[1]__0/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin test_wstate_OBUF[0] with 1st driver pin 'wstate_reg[0]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:133]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin test_wstate_OBUF[0] with 2nd driver pin 'wstate_reg[0]__0/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:117]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin test_rstate_OBUF[1] with 1st driver pin 'rstate_reg[1]/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:182]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin test_rstate_OBUF[1] with 2nd driver pin 'rstate_reg[1]__0/Q' [D:/SOC/course-lab_3-2022.1/fir/rtl/fir.v:118]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        3|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1295.738 ; gain = 72.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1295.738 ; gain = 72.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1295.738 ; gain = 72.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1295.738 ; gain = 72.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     2|
+|3     |LUT2 |     2|
+|4     |LUT3 |     7|
+|5     |LUT4 |    31|
+|6     |LUT5 |     3|
+|7     |LUT6 |    10|
+|8     |FDRE |    41|
+|9     |LD   |    12|
+|10    |IBUF |    94|
+|11    |OBUF |   197|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1295.738 ; gain = 72.629
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 105 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1295.738 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1295.738 ; gain = 72.629
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1299.129 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1305.762 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  LD => LDCE: 12 instances
+
+Synth Design complete, checksum: 9e301921
+INFO: [Common 17-83] Releasing license: Synthesis
+17 Infos, 2 Warnings, 105 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1305.762 ; gain = 82.652
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/SOC/course-lab_3-2022.1/vivado/project_2/project_2.runs/synth_1/fir.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fir_utilization_synth.rpt -pb fir_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  9 13:55:52 2023...
